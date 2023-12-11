@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Created By: Julien Lamoureux
-# Date: December 6, 2023
+# Date: December 10, 2023
 # This program display an equation of a line or the volume of a square pyramid
 
 
@@ -50,7 +50,7 @@ def main_equation_of_a_line():
                     # if the y-int is negative, display the equation of a line with it being subtracted
                     if y_int < 0:
                         print(
-                            "The equation of your line is y = {}x-{}".format(
+                            "The equation of your line is y = {}x{}".format(
                                 slope, y_int
                             )
                         )
@@ -122,7 +122,11 @@ def main_volume_square_pyramid():
             volume_pyramid = calc_volume_pyramid(base_float, height_float)
 
             # display the volume of the pyramid
-            print("The volume of your square pyramid is {} cm^3".format(volume_pyramid))
+            print(
+                "The volume of your square pyramid is {:.2f} cm^3".format(
+                    volume_pyramid
+                )
+            )
         except:
             # if the height cannot become a float, tell the user to enter one
             print(
