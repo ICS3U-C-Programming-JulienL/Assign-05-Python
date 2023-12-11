@@ -63,9 +63,7 @@ def main_equation_of_a_line():
                         )
                     elif y_int == 0:
                         # otherwise if the y-int is positive, display the equation of a line without the y-int
-                        print(
-                            "The equation of your line is y = {}x".format(slope)
-                        )
+                        print("The equation of your line is y = {}x".format(slope))
 
                 except:
                     # if y2 cannot become a float, tell the user to enter one
