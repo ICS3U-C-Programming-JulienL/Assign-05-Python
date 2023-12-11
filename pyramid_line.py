@@ -47,10 +47,25 @@ def main_equation_of_a_line():
                     # call the calc_y_int function
                     y_int = calc_y_int(x_point1_float, y_point1_float, slope)
 
-                    # display the equation of a line
-                    print(
-                        "The equation of your line is y = {}x+{}".format(slope, y_int)
-                    )
+                    # if the y-int is negative, display the equation of a line with it being subtracted
+                    if y_int < 0:
+                        print(
+                            "The equation of your line is y = {}x-{}".format(
+                                slope, y_int
+                            )
+                        )
+                    elif y_int > 0:
+                        # otherwise if the y-int is positive, display the equation of a line with it being added
+                        print(
+                            "The equation of your line is y = {}x+{}".format(
+                                slope, y_int
+                            )
+                        )
+                    elif y_int == 0:
+                        # otherwise if the y-int is positive, display the equation of a line without the y-int
+                        print(
+                            "The equation of your line is y = {}x".format(slope, y_int)
+                        )
 
                 except:
                     # if y2 cannot become a float, tell the user to enter one
